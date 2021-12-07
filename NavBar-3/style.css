@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Readex+Pro:wght@300&display=swap');
+
+body, html{
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    width: 100%;
+    font-family: 'Readex Pro', sans-serif;
+    overflow: hidden;
+}
+
+header{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    min-width: 90%;
+    height: 8vh;
+    padding: 10px;
+    background-color: rgb(207, 185, 221);
+}
+
+.mobileNav{
+    display: none;
+}
+.navTxt{
+    text-decoration: none;
+    color: black;
+    padding: 10px;
+    font-size: 1.2em;
+}
+
+.navTxt:hover{
+    color: #fff;
+    -webkit-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+}
+
+/*Dot and animation under the links in the NavBar */
+
+.tab .underDot {
+    width: 7px;
+    height: 7px;
+    background: #fff;
+    border-radius: 50%;
+    opacity: 0;
+    transform: translateX(40px);
+    transition: all 0.2s ease-in-out;
+}
+/*Home*/
+.tab a:nth-child(1):hover ~ .underDot {
+   transform: translateX(35px);
+   transition: all 0.2s ease-in-out;
+   opacity: 1;
+}
+ /*About*/ 
+.tab a:nth-child(2):hover ~ .underDot {
+   transform: translateX(115px);
+   transition: all 0.2s ease-in-out;
+   opacity: 1;
+}
+/*Work*/
+.tab a:nth-child(3):hover ~ .underDot {
+   transform: translateX(190px);
+   transition: all 0.2s ease-in-out;
+   opacity: 1;
+}
+/*Contact*/  
+.tab a:nth-child(4):hover ~ .underDot {
+   transform: translateX(275px);
+   transition: all 0.2s ease-in-out;
+   opacity: 1;
+}
+  
+@media only screen and (max-width: 700px) {
+    .navTxt{
+        display: none;
+    }
+    header{
+        display: none;
+    }
+    .mobileNav{
+        display: block;
+        overflow: hidden;
+        background-color: rgb(207, 185, 221);;
+        position: relative;
+    }
+    .mobileNav #navLinks {
+        display: none;
+    }
+      
+     /* Style navigation menu links */
+    .mobileNav a {
+       color: #000;
+       padding: 14px 16px;
+       text-decoration: none;
+       font-size: 17px;
+       display: block;
+       text-align: center;
+    }
+      
+    /* Style the toggle menu */
+    .mobileNav a.icon {
+       background: #fff;
+       display: block;
+       position: relative;
+       right: 60;
+       top: 0;
+    }
+      
+    /* Add color on hover */
+    .mobileNav a:hover {
+       color: black;
+    }
+      
+    /* Active link */
+    .active {
+       background-color: #070707;
+       transition: all 0.2s ease-in-out;
+    }
+}
